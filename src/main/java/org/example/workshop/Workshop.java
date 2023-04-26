@@ -16,4 +16,27 @@ package org.example.workshop;
 
 
 public class Workshop {
+    public Workshop() {
+    }
+
+    public static void acceptCar(){
+        System.out.println("Car accepted!");
+    }
+
+    public static void inspectCarAndFix(Car car){
+        for(int i = 0; i < 3; i++){
+            if (car.eachTire(i) < 1){
+                System.out.println("Tire " + i + " needs fixing!");
+                while (car.eachTire(i) < 2.5){
+                    car.pumpingTire(i, 0.1);
+                    System.out.println("Tire presure: "+ car.eachTire(i));
+                }
+            }
+        }
+        car.tireStatus();
+    }
+
+
+
+
 }
