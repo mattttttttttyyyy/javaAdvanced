@@ -30,8 +30,10 @@ public class Car {
     }
 
     public void tireStatus() {
+        int i = 1;
         for (Wheels wheels : wheels){
-            System.out.println("Tire presure is: " + wheels.tirePressure);
+            System.out.println("Tire "+ i + " pressure is: " + wheels.tirePressure);
+            i++;
         }
     }
 
