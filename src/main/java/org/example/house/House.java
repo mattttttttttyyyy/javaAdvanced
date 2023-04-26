@@ -47,6 +47,9 @@ public class House {
         room2.cleanRoom();
         System.out.println("Room two bed: " + room2.bed.getDaysCounter());
 
+        System.out.println("Big room has: " + room1.howManyWindows() + " windows.");
+        System.out.println("Big room has: " + room2.howManyWindows() + " windows.");
+
 
 
 

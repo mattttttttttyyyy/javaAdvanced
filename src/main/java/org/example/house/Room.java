@@ -21,6 +21,10 @@ public class Room {
 
     }
 
+    public int howManyWindows(){
+        return roomWindows.length;
+    }
+
     public void cleanRoom(){
         for(Window window : roomWindows){
             window.openWindow();
