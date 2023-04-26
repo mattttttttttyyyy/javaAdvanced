@@ -24,13 +24,15 @@ public class LineFactory {
 
     public void setLengthRandomCharacter(){
         int randomCharNumber = rand.nextInt((availableCharacters.length()-1));
-        Line line = new Line(lineLength, String.valueOf(availableCharacters.charAt(randomCharNumber)));
+        Line line = new Line(lineLength, String.valueOf
+                (availableCharacters.charAt(randomCharNumber)));
         line.linePrint();
     }
 
     public void randomAllLine(){
         Line line = new Line(rand.nextInt(25),
-                String.valueOf(availableCharacters.charAt(rand.nextInt((availableCharacters.length()-1)))));
+                String.valueOf(availableCharacters.
+                        charAt(rand.nextInt((availableCharacters.length()-1)))));
         line.linePrint();
         for (int i = 0; i < numberOfLines; i++){
             setLengthRandomCharacter();
@@ -42,7 +44,8 @@ public class LineFactory {
         for(int i = 0; i < numberOfLines; i++){
            lineLength = lineLength * 2;
             Line line = new Line(lineLength,
-                    String.valueOf(availableCharacters.charAt(rand.nextInt((availableCharacters.length()-1)))));
+                    String.valueOf(availableCharacters.
+                            charAt(rand.nextInt((availableCharacters.length()-1)))));
             line.linePrint();
         }
     }
