@@ -39,16 +39,16 @@ public class House {
         room2.windowsStatus();
 
 
-        System.out.println("Room one bed sheet count: " + room1.bed.getDaysCounter());
+        System.out.println("Room one bed sheet count: " + room1.bedStatus());
         room1.cleanRoom();
         for(Window window : windows) {
             System.out.println("Window open: " + window.isWindowOpen());
         }
-        System.out.println("Room one bed: " + room1.bed.getDaysCounter());
-        System.out.println("Room two bed: " + room2.bed.getDaysCounter());
+        System.out.println("Room one bed: " + room1.bedStatus());
+        System.out.println("Room two bed: " + room2.bedStatus());
         System.out.println("cleaning room two");
         room2.cleanRoom();
-        System.out.println("Room two bed: " + room2.bed.getDaysCounter());
+        System.out.println("Room two bed: " + room2.bedStatus());
 
         System.out.println("Big room has: " + room1.howManyWindows() + " windows.");
         System.out.println("Big room has: " + room2.howManyWindows() + " windows.");

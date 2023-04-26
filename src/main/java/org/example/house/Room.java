@@ -1,8 +1,8 @@
 package org.example.house;
 
 public class Room {
-    Window[] roomWindows;
-    Bed bed;
+    private Window[] roomWindows;
+    private Bed bed;
 
     public Room(Window windows[], Bed bed) {
         this.bed = bed;
@@ -45,6 +45,10 @@ public class Room {
             System.out.println("Window " + i + " is: " + windowStatusTXT);
             i++;
         }
+    }
+
+    public int bedStatus(){
+        return bed.getDaysCounter();
     }
 
 
