@@ -27,30 +27,34 @@ public class CarDemo {
         cars[1] = new Car("BMW", 120220);
         cars[2] = new Car("Renault", 66850);
 
-        for (int i = 0; i < cars.length; i++){
-            System.out.println(cars[i].getBrandAndMileage());
+        for (Car car : cars) {
+            System.out.println(car.getBrandAndMileage());
         }
 
         System.out.println("\n Checking distance to service: \n");
-        for (int i = 0; i < cars.length; i++){
-            System.out.println(cars[i].brand + " has " + cars[i].howMuchToInspection() + " left to service.");
+        for (Car car : cars) {
+            System.out.println(car.brand + " has " + car.howMuchToInspection() + " left to service.");
         }
 
-        System.out.println("\n All cars are driving for another 30k Km \n");
+        System.out.println("\n All cars are driving for another 25k Km \n");
 
-        for (int i = 0; i < cars.length; i++){
-            cars[i].setDistance(30000);
+        for (Car car : cars) {
+            car.setDistance(25000);
         }
 
         System.out.println("\n New details: ");
-        for (int i = 0; i < cars.length; i++){
-            System.out.println(cars[i].getBrandAndMileage());
+        for (Car car : cars) {
+            System.out.println(car.getBrandAndMileage());
         }
 
         System.out.println("\n New left to service: ");
-        for (int i = 0; i < cars.length; i++){
-            System.out.println(cars[i].brand + " has " + cars[i].howMuchToInspection() + " left to service.");
+        for (Car car : cars) {
+            System.out.println(car.brand + " has " + car.howMuchToInspection() + " left to service.");
         }
+
+        Line line = new Line(20, "#");
+        System.out.println(line.linePrint());
+
 
 
 

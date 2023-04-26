@@ -18,36 +18,15 @@ package org.example;
 public class Car {
     String brand;
     int mileage;
-    int distance;
 
     public Car(String brand, int mileage) {
         this.brand = brand;
         this.mileage = mileage;
     }
 
-    public String getBrand() {
-        return brand;
-    }
-
-    public void setBrand(String brand) {
-        this.brand = brand;
-    }
-
-    public int getMileage() {
-        return mileage;
-    }
-
-    public void setMileage(int mileage) {
-        this.mileage = mileage;
-    }
-
-    public int getDistance() {
-        return distance;
-    }
 
     public void setDistance(int distance) {
-        this.distance = distance;
-        mileage = mileage + distance;
+        mileage += distance;
     }
 
 
@@ -69,9 +48,7 @@ public class Car {
     //        which you will need to perform the inspection
     //        (taking into account the current mileage).
     public int howMuchToInspection(){
-        float servicePeriods = (float) (mileage / 30000);
-        return (mileage - Math.round(30000 * servicePeriods));
+        int servicePeriods =  mileage / 30000;
+        return (mileage - (30000 * servicePeriods));
     }
-
-
 }
