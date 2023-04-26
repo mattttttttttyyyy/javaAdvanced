@@ -32,6 +32,21 @@ public class Room {
         bed.cleanBed();
     }
 
+    public void windowsStatus(){
+        int i = 1;
+        for (Window window : roomWindows){
+            String windowStatusTXT;
+            if (window.isWindowOpen()){
+                windowStatusTXT = "open";
+            } else {
+                windowStatusTXT = "closed";
+            }
+
+            System.out.println("Window " + i + " is: " + windowStatusTXT);
+            i++;
+        }
+    }
+
 
     public Bed getBed() {
         return bed;

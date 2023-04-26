@@ -35,6 +35,9 @@ public class House {
 
         Room room1 = new Room(windows, bed);
         Room room2 = new Room();
+        room1.windowsStatus();
+        room2.windowsStatus();
+
 
         System.out.println("Room one bed sheet count: " + room1.bed.getDaysCounter());
         room1.cleanRoom();
@@ -49,6 +52,9 @@ public class House {
 
         System.out.println("Big room has: " + room1.howManyWindows() + " windows.");
         System.out.println("Big room has: " + room2.howManyWindows() + " windows.");
+
+        room1.windowsStatus();
+        room2.windowsStatus();
 
 
 
