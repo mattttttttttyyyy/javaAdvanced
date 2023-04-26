@@ -14,5 +14,7 @@ public class LinesDemo {
         lineFactory1.randomAllLine();
         System.out.println("\n****************************************\n");
         lineFactory1.randomCharAndTwoX();
+        System.out.println("\n****************************************\n");
+        lineFactory1.test(15).linePrint();
     }
 }

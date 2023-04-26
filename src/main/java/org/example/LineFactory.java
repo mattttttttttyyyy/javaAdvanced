@@ -50,4 +50,9 @@ public class LineFactory {
         }
     }
 
+
+    public Line test(int test){
+        return new Line(test, "*");
+    }
+
 }
