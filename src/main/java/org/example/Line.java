@@ -18,12 +18,12 @@ public class Line {
         this.character = character;
     }
 
-    public String linePrint(){
+    public void linePrint(){
         String lineToPrint = "";
         for (int i = 0; i < length; i++)
         {
             lineToPrint += character;
         }
-        return lineToPrint;
+        System.out.println(lineToPrint);
     }
 }
