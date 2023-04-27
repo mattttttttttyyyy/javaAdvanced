@@ -1,37 +1,31 @@
 package org.example.town;
-//Create an abstract class Citizen and inherit classes:
-//        Peasant,
-//        Townsman,
-//        King,
-//        Soldier.
-//        All classes have a name field (think about where this field should be).
-//        Citizen should be an abstract class that has an abstract method 'canVote'
-//        which returns true for townsman and soldier but false for peasant and king.
-//
-//        Create a Town class that has a collection of Citizen objects.
-//        Add some citizens to it (by creating them in main). The Town object should have methods:
-//        - howManyCanVote - which returns the number of people who can vote,
-//        - whoCanVote - which prints the names of people who can vote.
 
-public class Town{
-    Citizen[] citizens;
 
-    public void setCitizens(Citizen citizens) {
-        this.citizens = new Citizen[]{citizens};
+public class Town {
+
+    public Town() {
     }
 
-    public Citizen[] getCitizens() {
-        return citizens;
-    }
-    public void canVote(Citizen citizen){
-        if(citizen.canVote){
-            System.out.println(citizen.name + " test");
+    public int howManyCanVote(Citizen[] citizens) {
+        int voterCount = 0;
+        for (Citizen citizen : citizens) {
+            if (citizen.canVote()) {
+                voterCount++;
+            }
         }
-
+        return voterCount;
     }
 
-
-    public void setCitizens(Citizen[] citizens) {
-        this.citizens=citizens;
+    public String whoCanVote(Citizen[] citizens) {
+        StringBuilder votersNames = new StringBuilder("Voters that can vote:");
+        StringBuilder nonVotersNames = new StringBuilder("\nNon voters:");
+        for (Citizen citizen : citizens) {
+            if (citizen.canVote()) {
+                votersNames.append("\n").append(citizen.name);
+            } else {
+                nonVotersNames.append("\n").append(citizen.name);
+            }
+        }
+        return votersNames + nonVotersNames.toString();
     }
 }
