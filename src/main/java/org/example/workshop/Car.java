@@ -4,6 +4,7 @@ import java.util.Random;
 
 public class Car {
     private Wheels[] wheels;
+    int serviceHistory = 0;
 
     public Car() {
         wheels = new Wheels[4];
@@ -44,9 +45,20 @@ public class Car {
         wheels[tireNumber].pumpTire(pumpingAmount);
     }
 
+    public void performedService(){
+        serviceHistory +=1;
+    }
+
+
     public static void main(String[] args) {
 
     }
 
+    public int getServiceHistory() {
+        return serviceHistory;
+    }
 
+    public void setServiceHistory(int serviceHistory) {
+        this.serviceHistory = serviceHistory;
+    }
 }

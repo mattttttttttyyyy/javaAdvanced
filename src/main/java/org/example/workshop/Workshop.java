@@ -26,15 +26,24 @@ public class Workshop {
     public static void inspectCarAndFix(Car car){
         for(int i = 0; i < 3; i++){
             if (car.eachTire(i) < 1){
-                System.out.println("Tire " + i + " needs fixing!");
+                System.out.println("Tire " + (i+1) + " needs fixing!");
                 while (car.eachTire(i) < 2.5){
                     car.pumpingTire(i, 0.5);
                     System.out.println("Pumping! Pressure: "+ car.eachTire(i));
                 }
             }
         }
-        System.out.println("Car is fixed, current tire pressure: ");
+        System.out.println("\nCar is fixed, current tire pressure: ");
         car.tireStatus();
+        Invoice invoice = new Invoice();
+        car.performedService();
+        invoice.generateInvoice(car.getServiceHistory());
+
+        //System.out.println( car.getServiceHistory());
+
+
+
+
     }
 
 
