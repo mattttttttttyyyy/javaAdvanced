@@ -27,7 +27,7 @@ public class Car {
         Random random = new Random();
         int randomWheel = random.nextInt(3);
         wheels[randomWheel].setTirePressure(0);
-        System.out.println("Wheel nr: " + randomWheel + " got a flat!");
+        System.out.println("Wheel nr: " + (randomWheel+1) + " got a flat!");
     }
 
     public void tireStatus() {
