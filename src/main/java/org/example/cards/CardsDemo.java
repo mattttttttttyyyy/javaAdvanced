@@ -13,23 +13,18 @@ Create a Card object. The card will be described by two enum class fields Rank (
 public class CardsDemo {
 
 
-
     public static void main(String[] args) {
         Card card1 = new Card(CardsSuit.DIAMONDS, CardsRank.EIGHT);
         System.out.println(card1);
         Card[] card = new Card[14];
 
-        for(int i = 2; i < 15; i++){
+        for (int i = 2; i < 14; i++) {
             card[i] = new Card(CardsSuit.DIAMONDS, i);
             System.out.println(card[i]);
         }
 
 
-
-        }
-
-
-
+    }
 
 
 }
