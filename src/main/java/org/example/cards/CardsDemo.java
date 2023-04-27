@@ -19,7 +19,7 @@ public class CardsDemo {
         Card[] card = new Card[14];
 
         for (int i = 2; i < 14; i++) {
-            card[i] = new Card(CardsSuit.DIAMONDS, i);
+            card[i] = new Card(CardsSuit.DIAMONDS, CardsRank.values()[i]);
             System.out.println(card[i]);
         }
 
