@@ -19,8 +19,9 @@ public class CardsDemo {
         System.out.println(card1);
         Card[] card = new Card[13];
 
-        for(int i = 0; i < 10; i++){
-            card[i] = new Card(CardsSuit.DIAMONDS);
+        for(int i = 0; i < 13; i++){
+            card[i] = new Card(CardsSuit.DIAMONDS, );
+            System.out.println(card1);
 
         }
 
