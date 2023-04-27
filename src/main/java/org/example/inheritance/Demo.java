@@ -48,6 +48,10 @@ public class Demo {
         animal.makeSound();
         animal = new Cat();
         animal.makeSound();
+        animal = new Fish("Rybka", 15, "Shark");
+        animal.move();
+
+        System.out.println(fish);
 
 
 

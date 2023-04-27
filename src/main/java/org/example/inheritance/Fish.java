@@ -1,5 +1,7 @@
 package org.example.inheritance;
 
+import java.util.Arrays;
+
 public class Fish extends Animal {
 
     private String name;
@@ -41,6 +43,14 @@ public class Fish extends Animal {
     public void eatSomething() {
         super.eatSomething();
         System.out.println("Fish is eating fish stuff.");
+    }
+
+    @Override
+    public String toString() {
+        return "Fish{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
     }
 
 
