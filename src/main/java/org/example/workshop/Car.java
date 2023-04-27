@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Car {
     private Wheels[] wheels;
-    int serviceHistory = 0;
+    private int serviceHistory = 0;
 
     public Car() {
         wheels = new Wheels[4];
@@ -14,18 +14,11 @@ public class Car {
         wheels[3] = new Wheels();
 
     }
-    //    private void wheelSetup(){
-//        wheels[0] = new Wheels();
-//        wheels[1] = new Wheels();
-//        wheels[2] = new Wheels();
-//        wheels[3] = new Wheels();
-//        wheels = new Wheels[4];
-//    }
 
 
     public void flatTire(){
         Random random = new Random();
-        int randomWheel = random.nextInt(3);
+        int randomWheel = random.nextInt(4);
         wheels[randomWheel].setTirePressure(0);
         System.out.println("Wheel nr: " + (randomWheel+1) + " got a flat!");
     }
@@ -58,7 +51,4 @@ public class Car {
         return serviceHistory;
     }
 
-    public void setServiceHistory(int serviceHistory) {
-        this.serviceHistory = serviceHistory;
-    }
 }

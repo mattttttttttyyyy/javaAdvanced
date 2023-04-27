@@ -24,7 +24,7 @@ public class Workshop {
     }
 
     public static void inspectCarAndFix(Car car){
-        for(int i = 0; i < 3; i++){
+        for(int i = 0; i < 4; i++){
             if (car.eachTire(i) < 1){
                 System.out.println("Tire " + (i+1) + " needs fixing!");
                 while (car.eachTire(i) < 2.5){

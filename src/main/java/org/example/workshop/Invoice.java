@@ -17,7 +17,5 @@ public class Invoice extends Workshop {
         System.out.println("**");
         System.out.println("**Total price: 100zł      **");
         System.out.println("****************************");
-
-
     }
 }
