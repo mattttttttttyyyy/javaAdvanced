@@ -25,7 +25,7 @@ public enum CardsRank {
     QUEEN(12),
     KING(13);
 
-    private final int cardStrength;
+    private int cardStrength;
     private String cardDescription;
 
     CardsRank(int cardStrength) {

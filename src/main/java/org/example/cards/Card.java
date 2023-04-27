@@ -21,6 +21,7 @@ public class Card {
         this.cardsRank = cardsRank;
     }
 
+
     public int getCardsRank() {
         return cardsRank.getCardStrength();
     }

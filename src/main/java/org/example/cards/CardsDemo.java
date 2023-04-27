@@ -15,8 +15,18 @@ public class CardsDemo {
 
 
     public static void main(String[] args) {
-        Card card = new Card(CardsSuit.DIAMONDS, CardsRank.EIGHT);
-        System.out.println(card);
+        Card card1 = new Card(CardsSuit.DIAMONDS, CardsRank.EIGHT);
+        System.out.println(card1);
+        Card[] card = new Card[13];
+
+        for(int i = 0; i < 10; i++){
+            card[i] = new Card(CardsSuit.DIAMONDS);
+
+        }
+
+
+
+        }
 
     }
 
