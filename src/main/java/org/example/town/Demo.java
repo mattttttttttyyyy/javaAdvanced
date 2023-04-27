@@ -8,6 +8,7 @@ public class Demo {
         Town krakow = new Town();
 
         System.out.println("There is: " + krakow.howManyCanVote(citizens) + " voters.");
+        System.out.println("---------------------------------------");
         System.out.println(krakow.whoCanVote(citizens));
 
     }

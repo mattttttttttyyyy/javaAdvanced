@@ -18,7 +18,7 @@ public class Town {
 
     public String whoCanVote(Citizen[] citizens) {
         StringBuilder votersNames = new StringBuilder("Voters that can vote:");
-        StringBuilder nonVotersNames = new StringBuilder("\nNon voters:");
+        StringBuilder nonVotersNames = new StringBuilder("\n\nNon voters:");
         for (Citizen citizen : citizens) {
             if (citizen.canVote()) {
                 votersNames.append("\n").append(citizen.name);
