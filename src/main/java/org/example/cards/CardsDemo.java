@@ -17,19 +17,17 @@ public class CardsDemo {
     public static void main(String[] args) {
         Card card1 = new Card(CardsSuit.DIAMONDS, CardsRank.EIGHT);
         System.out.println(card1);
-        Card[] card = new Card[13];
+        Card[] card = new Card[14];
 
-        for(int i = 0; i < 13; i++){
-            card[i] = new Card(CardsSuit.DIAMONDS, );
-            System.out.println(card1);
-
+        for(int i = 2; i < 15; i++){
+            card[i] = new Card(CardsSuit.DIAMONDS, i);
+            System.out.println(card[i]);
         }
 
 
 
         }
 
-    }
 
 
 

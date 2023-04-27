@@ -21,6 +21,24 @@ public class Card {
         this.cardsRank = cardsRank;
     }
 
+    public Card(CardsSuit cardsSuit, int cardS) {
+        this.cardsSuit = cardsSuit;
+        switch (cardS){
+            case 2: this.cardsRank = CardsRank.TWO;
+            case 3: this.cardsRank = CardsRank.THREE;
+            case 4: this.cardsRank = CardsRank.FOUR;
+            case 5: this.cardsRank = CardsRank.FIVE;
+            case 6: this.cardsRank = CardsRank.SIX;
+            case 7: this.cardsRank = CardsRank.SEVEN;
+            case 8: this.cardsRank = CardsRank.EIGHT;
+            case 9: this.cardsRank = CardsRank.NINE;
+            case 10: this.cardsRank = CardsRank.TEN;
+            case 11: this.cardsRank = CardsRank.JACK;
+            case 12: this.cardsRank = CardsRank.QUEEN;
+            case 13: this.cardsRank = CardsRank.KING;
+            case 14: this.cardsRank = CardsRank.ACE;
+        }
+    }
 
     public int getCardsRank() {
         return cardsRank.getCardStrength();
