@@ -24,7 +24,10 @@ public class Town{
         return citizens;
     }
     public void canVote(Citizen citizen){
-        System.out.println(citizen.name + " test");
+        if(citizen.canVote){
+            System.out.println(citizen.name + " test");
+        }
+
     }
 
 
