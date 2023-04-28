@@ -1,18 +1,24 @@
 package org.example.dodgeball;
 
+import java.util.Objects;
 import java.util.Random;
 
 public class PlayerSetup {
-    int positionX;
-    int positionY;
-    String name;
-    int score;
-    String symbol;
+    private int positionX;
+    private int positionY;
+    private String name;
+    private int score;
+    private String symbol;
+    int playerLife = 1;
 
     public PlayerSetup(int positionX, int positionY, String symbol) {
         this.positionX = positionX;
         this.positionY = positionY;
         this.symbol = symbol;
+    }
+
+    public String getSymbol() {
+        return symbol;
     }
 
     public int getPositionX() {
@@ -50,6 +56,33 @@ public class PlayerSetup {
             case 1 -> positionY += 1;
             case 2 -> positionX -= 1;
             case 3 -> positionX += 1;
+        }
+    }
+    public String getPlayerPosition(){
+        return "Position X: " + positionX + " position Y: " + positionY;
+    }
+
+    public String getName() {
+        return name;
+    }
+    public void looseLife(){
+        playerLife -= 1;
+    }
+
+    public int getPlayerLife() {
+        return playerLife;
+    }
+
+    public void gainPoint(){
+        score += 1;
+    }
+
+    public void checkIfCollide (PlayerSetup player1, PlayerSetup player2, PlayerSetup player3){
+        if (Objects.equals(player1.getPlayerPosition(), player2.getPlayerPosition())){
+            //System.out.println(player1.getSymbol() + " collided with " + player2.getSymbol() );
+            player2.looseLife();
+        } else if (Objects.equals(player1.getPlayerPosition(), player3.getPlayerPosition())) {
+            player3.looseLife();
         }
     }
 }

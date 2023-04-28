@@ -5,6 +5,9 @@ import java.util.Scanner;
 
 public class Game {
     String playerMovement;
+    public void gameSetup(){
+
+    }
     public void gameEngine(){
         Random random = new Random();
         PlayerSetup player1 = new PlayerSetup(random.nextInt(10), random.nextInt(10), "O");
@@ -18,10 +21,11 @@ public class Game {
             playground.playgroundSetup(player1, player2, player3);
             Scanner scanner = new Scanner(System.in);
             System.out.println("Choose direction: ");
+            player1.checkIfCollide(player1, player2, player3);
             String movement = scanner.nextLine();
             player1.playerMove(movement);
-            player2.computerMovement();
-            player3.computerMovement();
+            //player2.computerMovement();
+            //player3.computerMovement();
             System.out.println("\n \n");
         }
 
