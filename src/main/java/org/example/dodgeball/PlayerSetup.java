@@ -81,14 +81,13 @@ public class PlayerSetup {
         return score;
     }
 
-    public void checkIfCollide (PlayerSetup player1, PlayerSetup player2, PlayerSetup player3){
-        if (Objects.equals(player1.getPlayerPosition(), player2.getPlayerPosition())){
-            //System.out.println(player1.getSymbol() + " collided with " + player2.getSymbol() );
+    public void checkIfCollide (PlayerSetup player1, PlayerSetup player2, PlayerSetup player3, PlayerSetup movingPlayer){
+        if (Objects.equals(player1.getPlayerPosition(), player2.getPlayerPosition()) && movingPlayer == player1){
             player2.looseLife();
-            player1.gainPoint();
-        } else if (Objects.equals(player1.getPlayerPosition(), player3.getPlayerPosition())) {
+            movingPlayer.gainPoint();
+        } else if (Objects.equals(player1.getPlayerPosition(), player3.getPlayerPosition()) && movingPlayer == player1) {
             player3.looseLife();
-            player1.gainPoint();
+            movingPlayer.gainPoint();
         }
     }
 }
