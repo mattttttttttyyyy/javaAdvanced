@@ -13,15 +13,16 @@ package org.example.dodgeball;
 //        Multidimensional arrays should not be used. Use objects and fields to store all data!
 
 
+import java.util.Scanner;
+
 public class Demo {
 
     public static void main(String[] args) {
 
-        PlayerSetup player1 = new PlayerSetup(1, 1, "O");
-        PlayerSetup player2 = new PlayerSetup(5, 6, "P");
-        PlayerSetup player3 = new PlayerSetup(4, 5, "Z");
+    Game game = new Game();
+    game.gameEngine();
 
-        Playground playground = new Playground();
-        playground.playgroundSetup(player1, player2, player3);
+
+
     }
 }
