@@ -22,10 +22,12 @@ public class Town {
         for (Citizen citizen : citizens) {
             if (citizen.canVote()) {
                 votersNames.append("\n").append(citizen.name);
-            } else {
-                nonVotersNames.append("\n").append(citizen.name);
             }
+//             else {
+//                nonVotersNames.append("\n").append(citizen.name);
+//            }
         }
-        return votersNames + nonVotersNames.toString();
+        return votersNames.toString();
+                //+ nonVotersNames.toString();
     }
 }
