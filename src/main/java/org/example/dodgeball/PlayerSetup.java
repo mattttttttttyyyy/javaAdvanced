@@ -77,12 +77,18 @@ public class PlayerSetup {
         score += 1;
     }
 
+    public int getScore() {
+        return score;
+    }
+
     public void checkIfCollide (PlayerSetup player1, PlayerSetup player2, PlayerSetup player3){
         if (Objects.equals(player1.getPlayerPosition(), player2.getPlayerPosition())){
             //System.out.println(player1.getSymbol() + " collided with " + player2.getSymbol() );
             player2.looseLife();
+            player1.gainPoint();
         } else if (Objects.equals(player1.getPlayerPosition(), player3.getPlayerPosition())) {
             player3.looseLife();
+            player1.gainPoint();
         }
     }
 }
