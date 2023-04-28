@@ -17,6 +17,7 @@ public class Game {
         PlayerSetup player3 = new PlayerSetup(random.nextInt(10), random.nextInt(10), "Z");
 
         boolean gameIsOn = true;
+        int round = 0;
         while (gameIsOn) {
 
             Playground playground = new Playground();
@@ -33,11 +34,16 @@ public class Game {
             String movement = scanner.nextLine();
             player1.playerMove(movement);
             player1.checkIfCollide(player1, player2, player3, player1);
-            player2.computerMovement();
-            player2.checkIfCollide(player2, player1, player3, player2);
-            player3.computerMovement();
-            player3.checkIfCollide(player3, player1, player2, player3);
+            if (round == 2){
+                player2.computerMovement();
+                player2.checkIfCollide(player2, player1, player3, player2);
+                player3.computerMovement();
+                player3.checkIfCollide(player3, player1, player2, player3);
+                round = 0;
+            }
+
             System.out.println("Player 1 score: " + player1.getScore() + " player 2: " + player2.getScore() + " player 3: " + player3.getScore());
+            round++;
             System.out.println("\n \n");
 
 
