@@ -12,9 +12,9 @@ public class Game {
 
     public void gameEngine() {
         Random random = new Random();
-        PlayerSetup player1 = new PlayerSetup(random.nextInt(10), random.nextInt(10), "O");
-        PlayerSetup player2 = new PlayerSetup(random.nextInt(10), random.nextInt(10), "P");
-        PlayerSetup player3 = new PlayerSetup(random.nextInt(10), random.nextInt(10), "Z");
+        PlayerSetup player1 = new PlayerSetup(random.nextInt(10), random.nextInt(10), "☺");
+        PlayerSetup player2 = new PlayerSetup(random.nextInt(10), random.nextInt(10), "♟");
+        PlayerSetup player3 = new PlayerSetup(random.nextInt(10), random.nextInt(10), "♟");
 
         boolean gameIsOn = true;
         int round = 0;
@@ -27,7 +27,7 @@ public class Game {
                 System.out.println("Congratulation you won!");
                 gameIsOn = false;
             } else if (player1.getPlayerLife() == 0) {
-                System.out.println("You lost!");
+                System.out.println("You lost! ☠");
                 gameIsOn = false;
             }
             System.out.println("Choose direction: ");
