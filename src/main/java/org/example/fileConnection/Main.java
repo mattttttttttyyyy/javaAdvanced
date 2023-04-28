@@ -15,9 +15,19 @@ package org.example.fileConnection;
         Also implement the "disconnect" method to change the state of the object to unconnected. Call this method in the final block of main.
 */
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
 public class Main {
+    private static final String FILE_PATH = "books.txt";
+
+
 
     public static void main(String[] args) {
+        loadBooks();
 
         try{
             exceptionExample();
@@ -28,7 +38,19 @@ public class Main {
     }
 
     public static void exceptionExample(){
-        throw new NullPointerException();
-        //System.out.println("No exception");
+        //throw new NullPointerException();
+        System.out.println("No exception");
     }
+    public static void loadBooks() {
+        File file = new File(FILE_PATH);
+        Scanner scanner = null;
+        try {
+            scanner = new Scanner(file);
+        } catch (FileNotFoundException e) {
+            System.out.println("No books found");;
+        }
+    }
+
+
+
 }

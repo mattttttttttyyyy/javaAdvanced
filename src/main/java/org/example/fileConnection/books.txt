@@ -1,0 +1,3 @@
+Joshua Bloch;Effective Java: Third Edition;2017
+Brian Goetz, Tim Peierls, Joshua Bloch, Joseph Bowbeer, David Holmes, Doug Lea;Java Concurrency in Practice;2006
+Kathy Sierra and Bert Bates;Head First Java: A Brain-Friendly Guide;2005
