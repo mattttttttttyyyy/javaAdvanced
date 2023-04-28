@@ -15,10 +15,10 @@ public class Main2 {
     public static int readNumber() {
         //create scanner, ask for number
         boolean errorChecker = true;
-
-        while (errorChecker){
+        while (errorChecker == true){
             try {
                 Scanner scanner = new Scanner(System.in);
+                System.out.println("Enter number: ");
                 int userChoice = scanner.nextInt();
                 errorChecker = false;
                 return userChoice;
