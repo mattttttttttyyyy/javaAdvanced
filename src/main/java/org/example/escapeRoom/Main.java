@@ -1,7 +1,6 @@
 package org.example.escapeRoom;
 
 import java.util.ArrayList;
-import java.util.Objects;
 import java.util.Scanner;
 
 public class Main {
@@ -33,24 +32,29 @@ public class Main {
             System.out.println("--------------------------------------");
             System.out.println("Pick one: ");
             String choice = scanner.nextLine().toLowerCase();
-            switch (choice) {
-                case "key" -> {
-                    yourObjects.add(key);
-                    key.setInPossession(true);
-                    available.remove(key);
-                }
-                case "window" -> window.windowInteraction();
-                case "door" -> {
-                    if (key.isInPossession()) {
-                        System.out.println("Door open! \n YOU WIN!");
-                        gameIsOn = false;
-                    } else {
-                        System.out.println("Can't open the door");
+            gameIsOn = isGameIsOn(key, window, available, yourObjects, gameIsOn, choice);
+        }
 
-                    }
+    }
+
+    private static boolean isGameIsOn(Key key, Window window, ArrayList<allElements> available, ArrayList<allElements> yourObjects, boolean gameIsOn, String choice) {
+        switch (choice) {
+            case "key" -> {
+                yourObjects.add(key);
+                key.setInPossession(true);
+                available.remove(key);
+            }
+            case "window" -> window.windowInteraction();
+            case "door" -> {
+                if (key.isInPossession()) {
+                    System.out.println("Door open! \n YOU WIN!");
+                    gameIsOn = false;
+                } else {
+                    System.out.println("Can't open the door");
+
                 }
             }
         }
-
+        return gameIsOn;
     }
 }
