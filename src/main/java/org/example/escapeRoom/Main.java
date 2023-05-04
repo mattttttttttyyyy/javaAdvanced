@@ -32,20 +32,22 @@ public class Main {
             System.out.println("Items in the room: " + available + " your items: " + yourObjects);
             System.out.println("--------------------------------------");
             System.out.println("Pick one: ");
-            String choice = scanner.nextLine();
-            if (Objects.equals(choice, "key")) {
-                yourObjects.add(key);
-                key.setInPossession(true);
-                available.remove(key);
-            } else if (Objects.equals(choice, "window")) {
-                window.windowInteraction();
-            } else if (Objects.equals(choice, "door")) {
-                if (key.isInPossession()) {
-                    System.out.println("Door open! \n YOU WIN!");
-                    gameIsOn = false;
-                } else {
-                    System.out.println("Can't open the door");
+            String choice = scanner.nextLine().toLowerCase();
+            switch (choice) {
+                case "key" -> {
+                    yourObjects.add(key);
+                    key.setInPossession(true);
+                    available.remove(key);
+                }
+                case "window" -> window.windowInteraction();
+                case "door" -> {
+                    if (key.isInPossession()) {
+                        System.out.println("Door open! \n YOU WIN!");
+                        gameIsOn = false;
+                    } else {
+                        System.out.println("Can't open the door");
 
+                    }
                 }
             }
         }
