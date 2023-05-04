@@ -3,6 +3,7 @@ package org.example.escapeRoom;
 public class Door extends allElements {
     boolean doorOpen = false;
     public Door(){
+        this.name = "door";
 
     }
     public Door(boolean doorOpen) {
