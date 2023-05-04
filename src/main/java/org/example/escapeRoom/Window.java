@@ -1,7 +1,7 @@
 package org.example.escapeRoom;
 
 public class Window extends allElements {
-    boolean windowOpen = false;
+    private boolean windowOpen = false;
 
     public boolean isWindowOpen() {
         return windowOpen;
