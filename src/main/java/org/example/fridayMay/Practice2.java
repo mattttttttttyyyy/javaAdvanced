@@ -54,7 +54,7 @@ public class Practice2 {
 
         System.out.println(generate.generate());
         TextConverter countDots = (String enterSentence) -> {
-            char dots = '.';
+            char dots = ',';
             int count = 0;
 
             for (int i = 0; i < enterSentence.length(); i++) {
