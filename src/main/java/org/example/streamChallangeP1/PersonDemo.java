@@ -31,6 +31,7 @@ public class PersonDemo {
         nameGenerator nameGenerator = new nameGenerator();
         System.out.println("\n");
         System.out.println(nameGenerator.randomName(random.nextInt(nameGenerator.nameBaseLegth())));
+        System.out.println(nameGenerator.nameBaseLegth());
     }
 
 }
