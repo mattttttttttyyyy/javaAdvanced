@@ -28,10 +28,9 @@ public class PersonDemo {
         //od tego momentu wykorzystuj również zbiór people do testu metod wykorzystujących argument List<Person>
 
         Random random = new Random();
-        nameGenerator nameGenerator = new nameGenerator();
+        NameGenerator nameGenerator = new NameGenerator();
         System.out.println("\n");
         System.out.println(nameGenerator.randomName(random.nextInt(nameGenerator.nameBaseLegth())));
-        System.out.println(nameGenerator.nameBaseLegth());
     }
 
 }
