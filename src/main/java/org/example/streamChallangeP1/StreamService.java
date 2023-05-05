@@ -15,6 +15,7 @@ public interface StreamService {
     // odfiltrowuje wszystkie imiona męskie i zbiera pozostałe do listy
     List<String> computeMaleNames(List<String> names);
 
+
     //wyświetla tylko liczby z określonego zakresu
     void printNumbersOfRange(int[] numbers, int minValue, int maxValue);
 
